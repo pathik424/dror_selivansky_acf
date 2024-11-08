@@ -144,24 +144,10 @@ get_header();
 
 <section class="fiber_flexible_Content repeater_imge_content_single">
     <div class="flexible_image_content_otr">
-        <?php if (have_rows('fourth_section')) :
-            while (have_rows('fourth_section')) : the_row();
-        ?>
-                <div class="flexible_img_content">
-                    <h3><?php the_sub_field('product_main_title'); ?></h3>
-
-                    <?php
-                        $image = get_sub_field('product_image');
-                        if ($image): ?>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                        <?php endif; ?>
-                </div>
-        <?php
-                break;
-            endwhile;
-        else :
-            echo '<p>No content found in fifth_section.</p>';
-        endif; ?>
+        <div class="flexible_img_content">
+            <h3>Concrete Fibers</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/image_box_1.png" alt="">
+        </div>
     </div>
 </section>
 
